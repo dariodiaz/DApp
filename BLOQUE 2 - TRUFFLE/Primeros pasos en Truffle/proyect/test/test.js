@@ -9,12 +9,12 @@ contract ('Hello', accounts =>  {
 
     it('2. Función setMessage(): Cambiar mensaje' , async () => {
         let instance = await Hello.deployed();
-        const tx = await instance.setMessage('Joan', {from: accounts[2]});
+        const tx = await instance.setMessage('Dario', {from: accounts[2]});
         console.log(accounts);
         console.log(accounts[2]);
         console.log(tx);
         const msg = await instance.getMessage.call();
-        assert.equal(msg, 'Joan');
+        assert.equal(msg, 'Dario');
     });
 
 });
